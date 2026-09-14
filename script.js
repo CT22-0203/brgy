@@ -97,20 +97,17 @@ form.addEventListener("submit", function (event) {
     }
     alert("Your borrower slip has been submitted successfully.");
 
-    const borrowerData = {
-        name: name,
-        address: address,
-        chairs: chairs,
-        tables: tables,
-        tents: tents,
-        dateBorrowed: dateBorrowed,
-        dateReturned: dateReturned,
-        validIDFileName: validIDFile.name
-    };
+    localStorage.setItem("name", name);
+    localStorage.setItem("address", address);
 
-    localStorage.setItem(
-        "borrowerData",
-        JSON.stringify(borrowerData)
-    );
+    localStorage.setItem("chairs", chairs);
+    localStorage.setItem("tables", tables);
+    localStorage.setItem("tents", tents);
+
+    localStorage.setItem("dateBorrowed", dateBorrowed);
+    localStorage.setItem("dateReturned", dateReturned);
+
+    localStorage.setItem("validID", validIDFile.name);
+    
     window.location.href = "home.html";
 });
