@@ -23,6 +23,7 @@ nameInput.addEventListener("input", function () {
 
 
 form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
     const name = document.getElementById("f-name").value;
     const address = document.getElementById("address").value;
@@ -110,5 +111,5 @@ form.addEventListener("submit", function (event) {
         "borrowerData",
         JSON.stringify(borrowerData)
     );
-
+    window.location.href = "home.html";
 });
