@@ -36,6 +36,7 @@ form.addEventListener("submit", function (event) {
     const dateReturned = document.getElementById("dateReturned").value;
 
     const validIDFile = document.getElementById("validID").files[0];
+    const agreeCheckbox = document.getElementById("agree");
 
 
     if (name.trim() === " ") {
